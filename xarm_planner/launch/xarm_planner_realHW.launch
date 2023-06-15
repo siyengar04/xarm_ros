@@ -1,8 +1,8 @@
 <launch>
 
-  <arg name="robot_ip" />
+  <arg name="robot_ip" default="192.168.1.178"/>
   
-  <arg name="robot_dof" />
+  <arg name="robot_dof" default="6"/>
   <!-- load the default move_group planner (not xarm_simple_planner) -->
   <arg name="show_rviz" default="true" />
   <!-- NO_GUI_CTRL means that Rviz configuration is just for display purpose, no (Moveit) control panel loaded -->
@@ -11,7 +11,7 @@
   <arg name="add_vacuum_gripper" default="false" />
   <arg name="report_type" default="normal" />
   <arg name="ext_ns" default="" />
-  <arg name="robot_type" default="xarm"/>
+  <arg name="robot_type" default="lite"/>
   <arg name="model1300" default="false" />
 
   <remap from="move_group/display_planned_path" to="$(arg ext_ns)/move_group/display_planned_path" />
