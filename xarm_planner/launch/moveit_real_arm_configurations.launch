@@ -2,7 +2,7 @@
   <arg name="arm_dof" />
   <arg name="robot_ip" />
   <arg name="end_effector" default="" />
-  <arg name="show_rviz" default="false" />
+  <arg name="show_rviz" default="true" />
   <arg name="no_gui_plan" default="true" />
   <arg name="report_type" default="normal" />
   <arg name="robot_type" default="xarm" />
