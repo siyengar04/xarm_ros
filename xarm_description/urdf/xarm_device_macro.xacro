@@ -69,7 +69,7 @@
 
     <joint name="${prefix}world_joint" type="fixed">
       <parent link="${attach_to}" />
-      <child link = "${prefix}link_base" />
+      <child link = "box" />
       <origin xyz="${attach_xyz}" rpy="${attach_rpy}" />
     </joint>
     

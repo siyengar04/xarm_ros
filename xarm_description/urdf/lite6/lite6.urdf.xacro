@@ -24,7 +24,32 @@
     <xacro:unless value="${use_xacro_load_yaml}">
       <xacro:property name="inertial_params" value="${load_yaml(link_inertial_params_file)}"/>
     </xacro:unless>
-    
+    <!---->
+  <link name="box">
+  
+    <visual>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 1"/>
+      </geometry>
+    </collision>
+
+  </link>
+    <joint name="box_joint" type="fixed">
+      <origin xyz="0 0 1" rpy="0 0 0" />
+      <parent link="box" />
+      <child link="link_base" />
+    </joint>
+
+  
+    <!---->
+
     <link name="${prefix}link_base">
       <inertial>
         <origin xyz="-0.00829544579053192 3.26357432323433E-05 0.0631194584987089" rpy="0 0 0" />
